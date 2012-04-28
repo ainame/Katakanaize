@@ -9,14 +9,24 @@ class Katakanaize
   end
 
   def call(env)
-    response = @app.call(env)
-    body = response[2][0]
-    new_body = NKF.nkf('-wh2', body)
-    new_response = Rack::Response.new do |res|
-      res.status = 200
-      res['Content-Type'] = 'text/html'
-      res.write new_body
-    end
-    new_response.finish
+    status, headers, response = @app.call(env)
+    new_body = [NKF.nkf('-wh2', response[0])]
+    Rack::Response.new(new_body, status, headers).finish
   end
 end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
