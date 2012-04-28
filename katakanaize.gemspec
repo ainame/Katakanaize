@@ -6,7 +6,7 @@ Gem::Specification.new do |gem|
   gem.email         = ["ainame954@facebook.com"]
   gem.description   = %q{Katakanaize is a rack middleware to convert hiragana to katakana.}
   gem.summary       = %q{Katakanaize is a rack middleware to convert hiragana to katakana.}
-  gem.homepage      = "http://github.com/ainame/Katakanize"
+  gem.homepage      = "http://github.com/ainame/Katakanaize"
   gem.files         = `git ls-files`.split($\)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
