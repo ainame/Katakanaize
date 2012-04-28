@@ -14,19 +14,3 @@ class Katakanaize
     Rack::Response.new(new_body, status, headers).finish
   end
 end
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
