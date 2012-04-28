@@ -1,6 +1,6 @@
 # Katakanaize
 
-TODO: Write a gem description
+Katakanaize is a rack middleware to convert hiragana to katakana.
 
 ## Installation
 
@@ -17,9 +17,13 @@ Or install it yourself as:
     $ gem install katakanaize
 
 ## Usage
+in config.ru
+```ruby
+require 'katakanaize'
 
-TODO: Write usage instructions here
-
+use Katakanize
+run YourApp.new
+```
 ## Contributing
 
 1. Fork it
